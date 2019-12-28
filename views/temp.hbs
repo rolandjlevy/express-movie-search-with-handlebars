@@ -1,0 +1,13 @@
+<h3>{{ Title }} ~  {{ Year }}</h3> 
+<a href="http://www.omdbapi.com/?i={{imdbID}}&apikey={{../apikey}}" target="_blank">Data</a> | <a href="https://www.imdb.com/title/{{imdbID}}" target="_blank">Website</a>
+
+<select name="page">
+  {{#each pages}}
+    <option value="{{@key}}">{{@key}}</option>
+  {{/each}}
+<select>
+
+<input type="number" name="page" placeholder="Page..." class="number" min="1" max="{{pages}}" />
+
+
+<a href="'http://www.omdbapi.com/?s=' + {{query}} + '&page=' + {{this}} + '&apikey=' + {{apikey}} + '"'>{{this}}</a>

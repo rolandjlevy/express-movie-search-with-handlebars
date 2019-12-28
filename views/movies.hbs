@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movies page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h3>Movie search results ({{pages}} pages)</h3>
+    <h4>for "{{query}}" page {{page}}</h4>
+    <!--<div class="pagination">
+      {{#for 0 pages 1 1}}
+        <a href="{{concat '/getmovies?query=' ../query '&page=' this}}">{{this}}</a>
+      {{/for}}
+    </div>-->
+    <form method="post" action="/getmovies">
+      <input type="text" name="query" placeholder="Search..." value="{{query}}" />
+      <select name="page">
+        <option value="1">Page...</option>
+        {{#for 0 pages 1 1}}
+          <option value="{{this}}">{{this}}</option>
+        {{/for}}
+      </select>
+      <button type="submit">Go</button>
+    </form>
+    <ul class="flex-container wrap">
+      {{#each Search}}
+        <li class="flex-item">
+          <a href="https://www.imdb.com/title/{{imdbID}}" target="_blank">
+            <img src="{{Poster}}">
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </body>
+</html>
