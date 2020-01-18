@@ -25,9 +25,18 @@
     <ul class="flex-container wrap">
       {{#each Search}}
         <li class="flex-item">
-          <a href="https://www.imdb.com/title/{{imdbID}}" target="_blank">
-            <img src="{{Poster}}">
-          </a>
+          <div class="image">
+            {{#ifcond Poster 'N/A'}}
+              <img src="https://bit.ly/2F3uCeS">
+            {{else}}
+              <a href="https://www.imdb.com/title/{{imdbID}}" target="_blank">
+                <img src="{{Poster}}">
+              </a>
+            {{/ifcond}}
+          </div>
+          <div class="title">
+            <h3>{{Title}}, {{Year}}</h3>
+          </div>
         </li>
       {{/each}}
     </ul>

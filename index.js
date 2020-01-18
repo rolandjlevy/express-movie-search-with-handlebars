@@ -39,6 +39,7 @@ const getMovies = async (req, res) => {
   const request = await fetch(url);
   const { Search, totalResults } = await request.json();
   const pages = Math.floor(Number(totalResults) / 10);
+  console.log(Search);
   res.render('movies', { Search, query, pages, page, apikey });
 }
 

@@ -34,3 +34,16 @@ Handlebars.registerHelper('concat', function() {
 // Example
 // {{url (concat './samples/' this '/')}}
 
+Handlebars.registerHelper('ifcond', function(v1, v2, options) {
+    if (v1 === v2) {
+      return options.fn(this);
+    }
+    return options.inverse(this);
+});
+
+// Example
+// {{#ifcond flag 'true'}}
+//    <img />
+// {{else}}
+//    <!-- I'm false -->
+// {{/ifcond}}
