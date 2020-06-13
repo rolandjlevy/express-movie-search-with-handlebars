@@ -2,6 +2,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .pagination {
   width: 200px;
   overflow-x: scroll;
@@ -58,6 +63,7 @@ input.number {
   background-color: #ededed;
   transition: all 0.25s ease;
   z-index: 1;
+  width: 20%;
 }
 
 .flex-item:hover {
@@ -77,10 +83,10 @@ input.number {
 }
 
 .flex-item .image img {
-  max-width: 200px;
+  /* max-width: 200px;
   height: 100%;
-  max-height: 300px;
-  object-fit: cover;
+  max-height: 300px; */
+  object-fit: contain;
   overflow: hidden;
   margin: 5px;
 }
