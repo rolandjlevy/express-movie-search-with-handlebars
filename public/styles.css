@@ -66,6 +66,18 @@ input.number {
   width: 20%;
 }
 
+@media only screen and (max-width: 768px) {
+  .flex-item {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .flex-item {
+    width: 33.3%;
+  }
+}
+
 .flex-item:hover {
   transform: scale(1.05);
   transition: all 0.25s ease;
