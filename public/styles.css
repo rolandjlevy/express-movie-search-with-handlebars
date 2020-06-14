@@ -86,9 +86,10 @@ input.number {
   /* max-width: 200px;
   height: 100%;
   max-height: 300px; */
-  object-fit:scale-down;
+  object-fit: contain;
   overflow: hidden;
   margin: 5px;
+  width: calc(100% - 10px);
 }
 
 .flex-item .image {
