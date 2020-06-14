@@ -66,15 +66,27 @@ input.number {
   width: 20%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .flex-item {
     width: 25%;
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 720px) {
   .flex-item {
     width: 33.3%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .flex-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .flex-item {
+    width: 100%;
   }
 }
 
