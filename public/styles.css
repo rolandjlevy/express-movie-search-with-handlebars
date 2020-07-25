@@ -1,5 +1,10 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px;
 }
 
 h3 {
@@ -9,7 +14,11 @@ h3 {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
 }
 
 .pagination {
@@ -49,6 +58,10 @@ input, button, select {
   font-size: 1rem;
   padding: 6px 12px;
   width: 6rem;
+}
+
+input {
+  width: 8rem;
 }
 
 input.number {
@@ -140,6 +153,14 @@ input.number {
   margin-left: 5px;
 }
 
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
 .m-l-10 {
   margin-left: 10px;
 }
@@ -147,3 +168,4 @@ input.number {
 .p-20 {
   padding: 20px !important;
 }
+
